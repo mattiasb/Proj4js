@@ -1,1 +1,3 @@
 *.pyc
+lib/proj4js-combined.js
+lib/proj4js-compressed.js
