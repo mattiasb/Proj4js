@@ -14,7 +14,8 @@ These are the main issues that I see with proj4js today:
   	Proj4js will either silently fail or chose some arbitrary default value (like wgs84 for a 
 	failed Proj4js.Proj construction or the point itself in case of a failed transform).
   * The Proj4js.Proj constructor is full of surprising side effects.
-  	* You can't construct a Proj from proj4-def, the constructor only takes an srsCode 
+  	* You can't construct a Proj from proj4-def, the constructor only takes an srsCode. This
+	  makes it impossible to construct an anonymous Proj.
 	* To construct a Proj you need to first add the proj4-def to the Proj4.defs dictionary 
 	  with its srs code as key
 	* However if the proj4-def isn't available in the dictionary the constructor will silently
