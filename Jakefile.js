@@ -1,6 +1,6 @@
 var $ = require('fquery');
 
-task('default', ['build']);
+task('default', ['build:all']);
 
 desc('Check source for errors with JSHint');
 task('jshint', [], function(){
@@ -8,7 +8,6 @@ task('jshint', [], function(){
 });
 
 namespace('build', function(){
-	task('default', ['build:all']);
 	
 	desc('Build all');
 	task('all', [  'build:browser'
