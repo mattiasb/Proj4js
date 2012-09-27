@@ -34,3 +34,10 @@ So the main goals currently is:
 
 Other possible goals:
   * Support building npm- and AMD packages
+
+Install
+-------
+You need node 0.8.x and npm installed. Then it's as easy as
+```
+npm install
+```
