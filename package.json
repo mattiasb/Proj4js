@@ -1,0 +1,27 @@
+{
+  "name": "proj4js",
+  "description": "Port of Proj4 to javascript",
+  "version": "1.2.0",
+  "author": "Mattias Bengtsson <mattias.bengtsson@kartena.se>",
+  "contributors": [ 
+    { "name": "Mike Adair", "email": "madair@dmsolutions.ca" },
+    { "name": "Mattias Bengtsson", "email": "mattias.bengtsson@kartena.se" }, 
+    { "name": "Frank Warmerdam", "email": "warmerdam@pobox.com" }
+  ],
+  "devDependencies": {
+    "fquery": "0.8.1",
+	"jake": "0.3.17"
+  },
+  "scripts":{
+    "postinstall": "node_modules/.bin/jake",
+	"build": "node_modules/.bin/jake"
+  },
+  "keywords": [
+    "gis",
+    "projection"
+  ],
+  "repository": "git://github.com/mattiasbengtsson/proj4js",
+  "main": "dist/proj4js.commonjs.js",
+  "engines": { "node": "0.8.x" }
+}
+
