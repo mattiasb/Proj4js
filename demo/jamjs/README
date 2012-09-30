@@ -1,0 +1,3 @@
+To install dependencies:
+   $ jam link ../../
+Then just open index.html in a browser. 
