@@ -1,0 +1,12 @@
+{
+  "name": "proj4loader",
+  "version": "0.0.1",
+  "description": "An amd loader for proj4js",
+  "jam": {
+    "dependencies": {
+      "jquery": "1.7.1",
+	  "text": "2.0.2",
+      "proj4js": "linked"
+    }
+  }
+}

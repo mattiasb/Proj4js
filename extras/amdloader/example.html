@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<title></title>
+<script src="jam/require.js"></script>
+</head>
+
+<body>
+<h1>Jamjs Demo</h1>
+<div>
+  <div id="log1"></div>
+  <div id="log2"></div>
+</div>
+<script>
+  require(['proj4js','jquery','proj!EPSG:2400'], function (P, $, RT90) {
+    var point = new P.Point(11.965281029948926, 57.7044945757868);
+
+    $('#log1').html("WGS84: lat=" + point.y + ", lon=" + point.x);
+    P.transform(P.WGS84, RT90, point);
+    $('#log2').html(" RT90: x=" + Math.round(point.y) + ", y=" + Math.round(point.x));
+  });
+</script>
+
+</body>
+</html>
