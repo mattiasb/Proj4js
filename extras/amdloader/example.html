@@ -12,7 +12,9 @@
   <div id="log2"></div>
 </div>
 <script>
-  require(['proj4js','jquery','proj!EPSG:2400'], function (P, $, RT90) {
+  require.config({ proj: { directory: 'proj' } });
+  require(['proj4js','jquery','proj!EPSG:2400'], function (P, $, RT90){
+
     var point = new P.Point(11.965281029948926, 57.7044945757868);
 
     $('#log1').html("WGS84: lat=" + point.y + ", lon=" + point.x);
