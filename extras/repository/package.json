@@ -1,0 +1,24 @@
+{
+	"name": "proj4js-repository",
+	"description": "",
+	"version": "1.2.0",
+	"author": "Mattias Bengtsson <mattias.bengtsson@kartena.se>",
+	"contributors": [ 
+		{ "name": "Mattias Bengtsson", "email": "mattias.bengtsson@kartena.se" }, 
+	],
+	"dependencies" : {
+		"proj4js": "~1.2.0"
+	},
+	"keywords": [
+		"gis",
+		"projection"
+	],
+	"repository": "git://github.com/mattiasbengtsson/proj4js",
+	"files": ["dist/proj4js.commonjs.js"],
+	"main": "dist/proj4js.commonjs.js",
+	"engines": { "node": "0.8.x" },
+    "jam": {
+		"main": "dist/proj4js.amd.js",
+		"include": [ "dist/proj4js.amd.js" ]
+	}
+}
