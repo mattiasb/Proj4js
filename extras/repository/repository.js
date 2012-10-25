@@ -26,14 +26,14 @@ module.exports = P.Class({
 		if(typeof(code) === 'object'){
 			var defs = code;
 			for(var key in defs){
-				this.addDef(key, defs[key]);
+				this.add(key, defs[key]);
 			}
 		} else {
 			this._projs[code] = def;
 		}
 	},
 
-	create: function(code){
+	proj: function(code){
 		// Proj-instance or Proj4 code string
 		var p = this._projs[code]; 
 		if(p){
