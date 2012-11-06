@@ -22,7 +22,7 @@
 	],
 	"repository": "git://github.com/mattiasbengtsson/proj4js",
 	"files": ["dist/proj4js.commonjs.js"],
-	"main": "dist/proj4js.commonjs.js",
+	"main": "dist/proj4js.node.js",
 	"engines": { "node": "0.8.x" },
     "jam": {
 		"main": "dist/proj4js.amd.js",
