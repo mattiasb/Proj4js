@@ -1,5 +1,7 @@
 var res = [8192, 4096, 2048, 1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1, 0.5];
 
+var Proj4js = P.noConflict();
+
 var proj = new Proj4js.Proj('EPSG:2400'
 					  , '+lon_0=15.808277777799999 +lat_0=0.0 +k=1.0 +x_0=1500000.0 '
 					  + '+y_0=0.0 +proj=tmerc +ellps=bessel +units=m '
