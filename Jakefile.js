@@ -13,7 +13,7 @@ var defaultFiles = [  'Proj4js.js'
 // Helpers
 
 var license = $('LICENSE')
-		.wrap('/*\n','\n*/')
+		.wrap('/*\n','*/')
 		.content();
 
 function compile(files){
@@ -49,7 +49,6 @@ namespace('build', function(){
 				 "\n\n})();")
 			.write($.OVERWRITE, 'dist/proj4js.js')
 			.uglifyjs()
-			.wrap(license)
 			.write($.OVERWRITE, 'dist/proj4js.min.js');
 	});
 
