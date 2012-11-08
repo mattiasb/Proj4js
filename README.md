@@ -35,9 +35,11 @@ So the main goals currently is:
 Other possible goals:
   * Support building npm- and AMD packages
 
-Install
+Compile & Install
 -------
-You need node 0.8.x and npm installed. Then it's as easy as
+You need node 0.8.x and npm installed. 
+To compile is then as easy as
 ```
 npm install
 ```
+and then just copy the wanted version from dist/
