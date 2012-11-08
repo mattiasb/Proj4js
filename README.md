@@ -1,7 +1,8 @@
 Proj4js
 =======
 
-A proj4js (http://trac.osgeo.org/proj4js/) fork for experimenting with some potential API cleanups.
+A proj4js (http://trac.osgeo.org/proj4js/) fork for experimenting with some potential API cleanups. 
+Very much a work in progress.
 
 Proj4js is in many ways an excellent library, it is very powerful, but the API is a bit quirky 
 and contains quite a few surprises.
