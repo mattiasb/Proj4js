@@ -44,7 +44,7 @@ namespace('build', function () {
 	desc('Build a classic browser-global version for use without a '
 		 + 'module loader.');
 	task('browser', ['jshint'], function () {
-		compile(["NoConflict.js"])
+		compile(["NoConflict.js","Request.Browser.js"])
 			.wrap(license + "\n\n(function(){\n\n",
 				 "\n\n})();")
 			.write($.OVERWRITE, 'dist/proj4js.js')
@@ -54,7 +54,7 @@ namespace('build', function () {
 
 	desc('Build a commonjs module for use in the browser');
 	task('commonjs', ['jshint'], function () {
-		compile()
+		compile("Request.Browser.js")
 			.wrap(license, '\n\n' + 'module.exports = Proj4js;')
 			.write($.OVERWRITE, 'dist/proj4js.commonjs.js');
 	});
@@ -68,7 +68,7 @@ namespace('build', function () {
 
 	desc('Build an AMD module to be loaded by for example require.js).');
 	task('AMD', ['jshint'], function () {
-		compile()
+		compile("Request.Browser.js")
 			.wrap('define(function () {'
 				  ,'return Proj4js; });')
 			.wrap(license)
