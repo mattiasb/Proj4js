@@ -7,6 +7,7 @@ var defaultFiles = [  'Proj4js.js'
 					, 'Point.js'
 					, 'Datum.js'
 					, 'Proj.js'
+					, 'Store.js'
 					, 'projCode/*.js'
 				   ];
 
