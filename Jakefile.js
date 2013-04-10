@@ -16,7 +16,7 @@ var license = $('LICENSE')
 		.wrap('/*\n','*/')
 		.content();
 
-function compile(files){
+function compile (files) {
 	var all = Array.isArray(files)
 			? defaultFiles.concat(files)
 			: defaultFiles;
@@ -29,11 +29,11 @@ function compile(files){
 task('default', ['build:all']);
 
 desc('Check source for errors with JSHint');
-task('jshint', [], function(){
+task('jshint', [], function () {
 	console.log("jshint checking not added yet");
 });
 
-namespace('build', function(){
+namespace('build', function () {
 
 	desc('Build all');
 	task('all', [  'build:browser'
@@ -43,7 +43,7 @@ namespace('build', function(){
 
 	desc('Build a classic browser-global version for use without a '
 		 + 'module loader.');
-	task('browser', ['jshint'], function(){
+	task('browser', ['jshint'], function () {
 		compile(["NoConflict.js"])
 			.wrap(license + "\n\n(function(){\n\n",
 				 "\n\n})();")
@@ -53,21 +53,21 @@ namespace('build', function(){
 	});
 
 	desc('Build a commonjs module for use in the browser');
-	task('commonjs', ['jshint'], function(){
+	task('commonjs', ['jshint'], function () {
 		compile()
 			.wrap(license, '\n\n' + 'module.exports = Proj4js;')
 			.write($.OVERWRITE, 'dist/proj4js.commonjs.js');
 	});
 
 	desc('Build a commonjs module for use in Node.js');
-	task('node', ['jshint'], function(){
+	task('node', ['jshint'], function () {
 		compile()
 			.wrap(license, '\n\n' + 'module.exports = Proj4js;')
 			.write($.OVERWRITE, 'dist/proj4js.node.js');
 	});
 
 	desc('Build an AMD module to be loaded by for example require.js).');
-	task('AMD', ['jshint'], function(){
+	task('AMD', ['jshint'], function () {
 		compile()
 			.wrap('define(function () {'
 				  ,'return Proj4js; });')
