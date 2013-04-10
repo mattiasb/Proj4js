@@ -1,7 +1,7 @@
 {
-  "name": "proj4js-demo",
+  "name": "proj4js-amd-demo",
   "version": "0.0.1",
-  "description": "A demo of proj4js",
+  "description": "A demo of proj4js as an amd module",
   "jam": {
     "dependencies": {
       "jquery": "1.7.1",

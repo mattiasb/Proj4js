@@ -55,7 +55,7 @@ namespace('build', function () {
 
 	desc('Build a commonjs module for use in the browser');
 	task('commonjs', ['jshint'], function () {
-		compile("Request.Browser.js")
+		compile(["Request.Browser.js"])
 			.wrap(license, '\n\n' + 'module.exports = Proj4js;')
 			.write($.OVERWRITE, 'dist/proj4js.commonjs.js');
 	});
@@ -69,7 +69,7 @@ namespace('build', function () {
 
 	desc('Build an AMD module to be loaded by for example require.js).');
 	task('AMD', ['jshint'], function () {
-		compile("Request.Browser.js")
+		compile(["Request.Browser.js"])
 			.wrap('define(function () {'
 				  ,'return Proj4js; });')
 			.wrap(license)
