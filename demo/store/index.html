@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<title></title>
+<script src="jam/require.js"></script>
+</head>
+
+<body>
+<h1>Jamjs Demo</h1>
+<div>
+  <div id="log1"></div>
+  <div id="log2"></div>
+  <div id="log3"></div>
+  <div id="log4"></div>
+</div>
+<script>
+  require(['proj4js','jquery'], function (P, $) {
+    P.reportError = function(str){
+      console.log(str);
+    };
+    var point = new P.Point(11.965281029948926, 57.7044945757868);
+    var p1 = point.clone();
+    var store = new P.Store();
+    store.add("EPSG:2400", "+lon_0=15.808277777799999 +lat_0=0.0 +k=1.0 +x_0=1500000.0 +y_0=0.0 +proj=tmerc +ellps=bessel +units=m +towgs84=414.1,41.3,603.1,-0.855,2.141,-7.023,0 +no_defs");
+
+    $('#log1').html("WGS84: lat=" + point.y + ", lon=" + point.x);
+    P.transform(P.WGS84, store.get("EPSG:2400"), p1);
+    $('#log2').html(" RT90: x=" + Math.round(p1.y) + ", y=" + Math.round(p1.x));
+
+    store.with('EPSG:3006', function(proj) {
+      var p2 = point.clone();
+      P.transform(P.WGS84, proj, p2);
+      $('#log3').html(" SWEREF99: x=" + Math.round(p2.y) + ", y=" + Math.round(p2.x));
+    }); 
+    store.with('EPSG:2016', function(proj) {
+      var p3 = point.clone();
+      P.transform(P.WGS84, proj, p3);
+      $('#log4').html(" NAD27: x=" + Math.round(p3.y) + ", y=" + Math.round(p3.x));
+    });
+  });
+</script>
+
+</body>
+</html>

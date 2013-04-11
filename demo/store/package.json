@@ -1,0 +1,11 @@
+{
+  "name": "proj4js-store-demo",
+  "version": "0.0.1",
+  "description": "A demo of proj4js Store class",
+  "jam": {
+    "dependencies": {
+      "jquery": "1.7.1",
+      "proj4js": "linked"
+    }
+  }
+}
