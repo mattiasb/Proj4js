@@ -9,8 +9,8 @@
 		{ "name": "Frank Warmerdam", "email": "warmerdam@pobox.com" }
 	],
 	"devDependencies": {
-		"fquery": "0.8.1",
-		"jake": "0.3.17"
+		"fquery": "0.8.x",
+		"jake": "0.5.x"
 	},
 	"scripts":{
 		"postinstall": "node_modules/.bin/jake",

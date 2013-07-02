@@ -38,7 +38,7 @@ Other possible goals:
 
 Compile & Install
 -------
-You need node 0.8.x and npm installed. 
+You need node 0.10.x and npm installed. 
 To compile is then as easy as
 ```
 npm install
